@@ -14,17 +14,28 @@ app.use(express.urlencoded({extended: true}));
 //app.use(db);
 
 app.get('/', (req, res, next) => {
-  res.json('404 NOT FOUND');
+  res.send("Hello world");
 })
 
-app.post('/roll/', (req, res, next) => {
+app.post('/app/'. (req, res, next) => {
+  200 OK
+})
+
+app.post('/app/roll/', (req, res, next) => {
   console.log("pain")
 })
 
-app.post('/roll/:sides/', (req, res, next) => {
+app.post('/app/roll/:sides/', (req, res, next) => {
 
 })
 
+app.post('/app/roll/:sides/:dice/', (req, res, next) => {
+
+})
+
+app.post('/app/roll/:sides/:dice/:rolls', (req, res, next) => {
+
+})
 app.listen(port, () => {
   console.log("Server listening on port " + port)
 })
