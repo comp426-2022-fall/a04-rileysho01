@@ -14,7 +14,7 @@ app.use(express.urlencoded({extended: true}));
 //app.use(db);
 
 app.get('/', (req, res, next) => {
-  res.send('Hello, world!')
+  res.json('404 NOT FOUND');
 })
 
 app.post('/roll/', (req, res, next) => {
