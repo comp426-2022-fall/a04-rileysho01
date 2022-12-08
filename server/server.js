@@ -31,7 +31,7 @@ app.post('/app/', (req, res, next) => {
 })
 
 app.post('/app/roll/', (req, res, next) => {
-  console.log("pain")
+  console.log("pain");
 })
 
 app.post('/app/roll/:sides/', (req, res, next) => {
