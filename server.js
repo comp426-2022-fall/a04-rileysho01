@@ -8,19 +8,14 @@ const app = express();
 
 const args = minimist(process.argv.slice(2));
 
-app.use(express.json());
-app.use(express.urlencoded({extended: true}));
-
-
 var port = 5000;
 if(args.port) {
   port = args.port;
 }
 
+app.use(express.json());
+app.use(express.urlencoded({extended: true}));
 
-app.listen(port, () => {
-  console.log("Server listening on port " + port)
-})
 
 app.get('/', (req, res, next) => {
   console.log("404 NOT FOUND");
@@ -50,5 +45,7 @@ app.get('/app/roll/:sides/:dice/:rolls', (req, res, next) => {
   console.log(out);
 })
 
-
+app.listen(port, () => {
+  console.log("Server listening on port " + port)
+})
 
