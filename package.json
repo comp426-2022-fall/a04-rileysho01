@@ -17,8 +17,10 @@
   },
   "homepage": "https://github.com/comp426-2022-fall/a04-rileysho01#readme",
   "dependencies": {
+    "bash": "^0.0.1",
     "express": "^4.18.2",
-    "minimist": "^1.2.7"
+    "minimist": "^1.2.7",
+    "shuf": "^1.0.2"
   },
   "type": "module"
 }
