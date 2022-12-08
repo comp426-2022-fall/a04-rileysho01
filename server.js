@@ -31,7 +31,7 @@ app.get('/app/', (req, res, next) => {
 })
 
 app.get('/app/roll/', (req, res, next) => {
-  const out = res.status(200).roll(2);
+  const out = res.status(200).json(roll(2));
   console.log(out);
 })
 
@@ -41,12 +41,12 @@ app.get('/app/roll/:sides/', (req, res, next) => {
 })
 
 app.get('/app/roll/:sides/:dice/', (req, res, next) => {
-  const out = res.status(200).roll(req.roll);
+  const out = res.status(200).json(roll(req.roll));
   console.log(out);
 })
 
 app.get('/app/roll/:sides/:dice/:rolls', (req, res, next) => {
-  const out = res.status(200).roll(req.roll);
+  const out = res.status(200).json(roll(req.roll, req.sides));
   console.log(out);
 })
 
