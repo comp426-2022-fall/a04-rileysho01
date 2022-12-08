@@ -31,8 +31,8 @@ app.post('/app/', (req, res, next) => {
 })
 
 app.get('/app/roll/', (req, res, next) => {
-  console.log("pain");
-})
+  res.status(200).json(roll(req.roll));
+});
 
 app.get('/app/roll/:sides/', (req, res, next) => {
   console.log("app roll sides");
