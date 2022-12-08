@@ -18,11 +18,11 @@ app.use(express.urlencoded({extended: true}));
 
 
 app.get('/', (req, res, next) => {
-  console.log("404 NOT FOUND");
+  res.send("404 NOT FOUND");
 })
 
 app.get('/app/', (req, res, next) => {
-  console.log("200 OK");
+  res.send("200 OK");
 })
 
 app.get('/app/roll/', (req, res, next) => {
