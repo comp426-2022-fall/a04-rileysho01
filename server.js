@@ -26,7 +26,7 @@ app.get('/', (req, res, next) => {
   console.log("404 NOT FOUND");
 })
 
-app.post('/app/', (req, res, next) => {
+app.get('/app/', (req, res, next) => {
   console.log("200 OK");
 })
 
