@@ -31,25 +31,25 @@ app.get('/app/nope/', (req, res, next) => {
 
 app.get('/app/roll/', (req, res, next) => {
   const out = res.status(200).json(roll(2));
-  res.send(out);
+  console.log(out);
 })
 
 app.get('/app/roll/:sides/', (req, res, next) => {
   const out = res.status(200).json("?sides=20&dice=4&rolls=3");
-  res.send(out);
+  console.log(out);
 })
 
 app.get('/app/roll/:sides/:dice/', (req, res, next) => {
   const out = res.status(200).json(roll(req.roll));
-  res.send(out);
+  console.log(out);
 })
 
 app.get('/app/roll/:sides/:dice/:rolls', (req, res, next) => {
   const out = res.status(200).json(roll(req.roll, req.sides));
-  res.send(out);
+  console.log(out);
 })
 
 app.listen(port, () => {
-  res.send("Server listening on port " + port)
+  console.log("Server listening on port " + port)
 })
 
