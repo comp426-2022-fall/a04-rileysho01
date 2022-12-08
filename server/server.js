@@ -1,6 +1,7 @@
 //Server file
 import express from 'express';
 import minimist from 'minimist';
+import { roll } from '../lib/a03/lib/roll.js';
 
 //const express = require('express');
 const app = express();
@@ -23,11 +24,11 @@ app.listen(port, () => {
 })
 
 app.get('/', (req, res, next) => {
-  res.send("404 NOT FOUND");
+  console.log("404 NOT FOUND");
 })
 
 app.post('/app/', (req, res, next) => {
-  res.send("200 OK");
+  console.log("200 OK");
 })
 
 app.post('/app/roll/', (req, res, next) => {
