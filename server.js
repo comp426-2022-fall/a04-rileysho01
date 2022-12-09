@@ -2,6 +2,7 @@
 import express from 'express';
 import minimist from 'minimist';
 //import { roll } from '../Users/rileyshopmyer/a04-rileysho01/lib/a03/lib/roll.js';
+import myDefault from "/modules/my-module.js";
 
 //const express = require('express');
 const app = express();
@@ -30,22 +31,22 @@ app.get('/app/nope/', (req, res, next) => {
 })
 
 app.get('/app/roll/', (req, res, next) => {
-  const out = res.status(200).json(roll(2));
+  const out = res.status(200).json(myDefault(2));
   console.log(out);
 })
 
 app.get('/app/roll/:sides/', (req, res, next) => {
-  const out = res.status(200).json("?sides=20&dice=4&rolls=3");
+  const out = res.status(200).json("?sides=20&dice=4&roll=3");
   console.log(out);
 })
 
 app.get('/app/roll/:sides/:dice/', (req, res, next) => {
-  const out = res.status(200).json(roll(req.roll));
+  const out = res.status(200).json(myDefault(req.myDefault));
   console.log(out);
 })
 
-app.get('/app/roll/:sides/:dice/:rolls', (req, res, next) => {
-  const out = res.status(200).json(roll(req.roll, req.sides));
+app.get('/app/roll/:sides/:dice/:myDefaults', (req, res, next) => {
+  const out = res.status(200).json(myDefault(req.myDefault, req.sides));
   console.log(out);
 })
 
