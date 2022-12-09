@@ -1,7 +1,7 @@
 //Server file
 import express from 'express';
 import minimist from 'minimist';
-import { roll } from '../lib/a03/lib/roll.js';
+import { roll } from '../roll.js';
 
 //const express = require('express');
 const app = express();
@@ -30,8 +30,8 @@ app.get('/app/nope/', (req, res, next) => {
 })
 
 app.get('/app/roll/', (req, res, next) => {
-  const out = res.status(200).json(roll(2));
-  console.log(out);
+  //const out = res.status(200).json(roll(2));
+  console.log(roll(2));
 })
 
 app.get('/app/roll/:sides/', (req, res, next) => {
