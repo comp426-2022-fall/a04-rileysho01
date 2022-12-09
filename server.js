@@ -1,7 +1,7 @@
 //Server file
 import express from 'express';
 import minimist from 'minimist';
-//import { roll } from '../lib/a03/lib/roll.js';
+import { roll } from '../lib/a03/lib/roll.js';
 
 //const express = require('express');
 const app = express();
@@ -26,7 +26,7 @@ app.get('/app/', (req, res, next) => {
 })
 
 app.get('/app/nope/', (req, res, next) => {
-  res.send("200 OK");
+  res.send("404 NOT FOUND");
 })
 
 app.get('/app/roll/', (req, res, next) => {
