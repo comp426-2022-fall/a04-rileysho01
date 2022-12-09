@@ -2,7 +2,7 @@
 import express from 'express';
 import minimist from 'minimist';
 //import { roll } from '../Users/rileyshopmyer/a04-rileysho01/lib/a03/lib/roll.js';
-import myDefault from "/modules/my-module.js";
+import myDefault from "/Users/rileyshopmyer/a04-rileysho01/lib/a03/lib/roll.js";
 
 //const express = require('express');
 const app = express();
